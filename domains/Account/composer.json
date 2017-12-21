@@ -1,0 +1,25 @@
+{
+    "name": "brksdeadpool/account",
+    "description": "",
+    "authors": [
+        {
+            "name": "Reginaldo Junior",
+            "email": "reginaldo.junior696@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Domains\\Account\\Providers\\AccountServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Domains\\Account\\": ""
+        }
+    }
+}
