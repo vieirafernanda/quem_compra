@@ -7,6 +7,11 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
+    public function before()
+    {
+        
+    }
+    
     /**
      * This namespace is applied to your controller routes.
      *
