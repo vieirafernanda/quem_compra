@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Quem Compra ?'),
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +179,7 @@ return [
 
         //  Domains Service Providers
         Domains\Account\Providers\AccountServiceProvider::class,
+        Domains\Cep\Providers\CepServiceProvider::class,
     ],
 
     /*

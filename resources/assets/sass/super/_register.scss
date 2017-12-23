@@ -1,0 +1,7 @@
+.register-form {
+  @apply .w-1/2;
+
+  &__title {
+    @apply .font-bold .text-center .mb-4;
+  }
+}

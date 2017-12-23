@@ -68,9 +68,7 @@ class AccountServiceProvider extends ServiceProvider
             $sourcePath => $viewPath
         ],'views');
 
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/account';
-        }, \Config::get('view.paths')), [$sourcePath]), 'account');
+        $this->loadViewsFrom($sourcePath, 'account');
     }
 
     /**

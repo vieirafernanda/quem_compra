@@ -1,0 +1,11 @@
+.input__container {
+  @apply .mb-4;
+}
+
+.input__label {
+  @apply .block .text-grey-darker .text-sm .font-bold .mb-2;
+}
+
+.input__control {
+  @apply .shadow .appearance-none .border .rounded .w-full .py-2 .px-3 .text-grey-darkest;
+}

@@ -1,0 +1,25 @@
+{
+    "name": "brksdeadpool/cep",
+    "description": "",
+    "authors": [
+        {
+            "name": "Reginaldo Junior",
+            "email": "reginaldo.junior696@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Domains\\Cep\\Providers\\CepServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Domains\\Cep\\": ""
+        }
+    }
+}

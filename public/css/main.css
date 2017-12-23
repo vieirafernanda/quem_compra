@@ -516,6 +516,130 @@ button,
  * @import "components/buttons";
  * @import "components/forms";
  */
+.container {
+  margin: 0 auto;
+}
+
+.input__container {
+  margin-bottom: 1rem;
+}
+
+.input__label {
+  display: block;
+  color: #606f7b;
+  font-size: .875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.input__control {
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-radius: .25rem;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #3d4852;
+}
+
+.vertical-divider {
+  clear: both;
+}
+
+.vertical-divider:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.vertical-divider .column:not(:first-child):after,
+.vertical-divider .columns:not(:first-child):after {
+  background: #ddd;
+  bottom: 0;
+  content: ' ';
+  margin-left: -10px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card {
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+.card__header {
+  font-weight: 500;
+  background-color: #f5690a;
+  font-size: 1.125rem;
+  padding: 0.75rem;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: #ffffff;
+}
+
+.card__content {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-bottom-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.btn {
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: .25rem;
+}
+
+.btn--primary {
+  background-color: #0502fc;
+  color: #ffffff;
+}
+
+.login-form,
+.register-form__partial {
+  width: 50%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.login-form__title,
+.register-form__partial__title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.register-form {
+  width: 50%;
+}
+
+.register-form__title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
@@ -863,60 +987,40 @@ button,
   background-color: #ffebef;
 }
 
-.bg-quem_compra-darkest {
+.bg-quem_compra-laranja {
   background-color: #f5690a;
 }
 
-.bg-quem_compra-darker {
+.bg-quem_compra-verde {
   background-color: #009900;
 }
 
-.bg-quem_compra-dark {
+.bg-quem_compra-azul {
   background-color: #0502fc;
 }
 
-.bg-quem_compra {
+.bg-quem_compra-roxo {
   background-color: #9d008f;
 }
 
-.bg-quem_compra-light {
+.bg-quem_compra-amarelo {
   background-color: #f6ff0a;
-}
-
-.bg-quem_compra-lighter {
-  background-color: #f7873b;
-}
-
-.bg-quem_compra-lightest {
-  background-color: #f9a56c;
-}
-
-.bg-brand-darkest {
-  background-color: #f5690a;
-}
-
-.bg-brand-darker {
-  background-color: #009900;
-}
-
-.bg-brand-dark {
-  background-color: #0502fc;
 }
 
 .bg-brand {
   background-color: #9d008f;
 }
 
-.bg-brand-light {
-  background-color: #f6ff0a;
+.bg-brand-primary {
+  background-color: #0502fc;
 }
 
-.bg-brand-lighter {
-  background-color: #f7873b;
+.bg-brand-secondary {
+  background-color: #f5690a;
 }
 
-.bg-brand-lightest {
-  background-color: #f9a56c;
+.bg-brand-background {
+  background-color: #f8fafc;
 }
 
 .hover\:bg-transparent:hover {
@@ -1211,60 +1315,40 @@ button,
   background-color: #ffebef;
 }
 
-.hover\:bg-quem_compra-darkest:hover {
+.hover\:bg-quem_compra-laranja:hover {
   background-color: #f5690a;
 }
 
-.hover\:bg-quem_compra-darker:hover {
+.hover\:bg-quem_compra-verde:hover {
   background-color: #009900;
 }
 
-.hover\:bg-quem_compra-dark:hover {
+.hover\:bg-quem_compra-azul:hover {
   background-color: #0502fc;
 }
 
-.hover\:bg-quem_compra:hover {
+.hover\:bg-quem_compra-roxo:hover {
   background-color: #9d008f;
 }
 
-.hover\:bg-quem_compra-light:hover {
+.hover\:bg-quem_compra-amarelo:hover {
   background-color: #f6ff0a;
-}
-
-.hover\:bg-quem_compra-lighter:hover {
-  background-color: #f7873b;
-}
-
-.hover\:bg-quem_compra-lightest:hover {
-  background-color: #f9a56c;
-}
-
-.hover\:bg-brand-darkest:hover {
-  background-color: #f5690a;
-}
-
-.hover\:bg-brand-darker:hover {
-  background-color: #009900;
-}
-
-.hover\:bg-brand-dark:hover {
-  background-color: #0502fc;
 }
 
 .hover\:bg-brand:hover {
   background-color: #9d008f;
 }
 
-.hover\:bg-brand-light:hover {
-  background-color: #f6ff0a;
+.hover\:bg-brand-primary:hover {
+  background-color: #0502fc;
 }
 
-.hover\:bg-brand-lighter:hover {
-  background-color: #f7873b;
+.hover\:bg-brand-secondary:hover {
+  background-color: #f5690a;
 }
 
-.hover\:bg-brand-lightest:hover {
-  background-color: #f9a56c;
+.hover\:bg-brand-background:hover {
+  background-color: #f8fafc;
 }
 
 .bg-bottom {
@@ -1619,60 +1703,40 @@ button,
   border-color: #ffebef;
 }
 
-.border-quem_compra-darkest {
+.border-quem_compra-laranja {
   border-color: #f5690a;
 }
 
-.border-quem_compra-darker {
+.border-quem_compra-verde {
   border-color: #009900;
 }
 
-.border-quem_compra-dark {
+.border-quem_compra-azul {
   border-color: #0502fc;
 }
 
-.border-quem_compra {
+.border-quem_compra-roxo {
   border-color: #9d008f;
 }
 
-.border-quem_compra-light {
+.border-quem_compra-amarelo {
   border-color: #f6ff0a;
-}
-
-.border-quem_compra-lighter {
-  border-color: #f7873b;
-}
-
-.border-quem_compra-lightest {
-  border-color: #f9a56c;
-}
-
-.border-brand-darkest {
-  border-color: #f5690a;
-}
-
-.border-brand-darker {
-  border-color: #009900;
-}
-
-.border-brand-dark {
-  border-color: #0502fc;
 }
 
 .border-brand {
   border-color: #9d008f;
 }
 
-.border-brand-light {
-  border-color: #f6ff0a;
+.border-brand-primary {
+  border-color: #0502fc;
 }
 
-.border-brand-lighter {
-  border-color: #f7873b;
+.border-brand-secondary {
+  border-color: #f5690a;
 }
 
-.border-brand-lightest {
-  border-color: #f9a56c;
+.border-brand-background {
+  border-color: #f8fafc;
 }
 
 .hover\:border-transparent:hover {
@@ -1967,60 +2031,40 @@ button,
   border-color: #ffebef;
 }
 
-.hover\:border-quem_compra-darkest:hover {
+.hover\:border-quem_compra-laranja:hover {
   border-color: #f5690a;
 }
 
-.hover\:border-quem_compra-darker:hover {
+.hover\:border-quem_compra-verde:hover {
   border-color: #009900;
 }
 
-.hover\:border-quem_compra-dark:hover {
+.hover\:border-quem_compra-azul:hover {
   border-color: #0502fc;
 }
 
-.hover\:border-quem_compra:hover {
+.hover\:border-quem_compra-roxo:hover {
   border-color: #9d008f;
 }
 
-.hover\:border-quem_compra-light:hover {
+.hover\:border-quem_compra-amarelo:hover {
   border-color: #f6ff0a;
-}
-
-.hover\:border-quem_compra-lighter:hover {
-  border-color: #f7873b;
-}
-
-.hover\:border-quem_compra-lightest:hover {
-  border-color: #f9a56c;
-}
-
-.hover\:border-brand-darkest:hover {
-  border-color: #f5690a;
-}
-
-.hover\:border-brand-darker:hover {
-  border-color: #009900;
-}
-
-.hover\:border-brand-dark:hover {
-  border-color: #0502fc;
 }
 
 .hover\:border-brand:hover {
   border-color: #9d008f;
 }
 
-.hover\:border-brand-light:hover {
-  border-color: #f6ff0a;
+.hover\:border-brand-primary:hover {
+  border-color: #0502fc;
 }
 
-.hover\:border-brand-lighter:hover {
-  border-color: #f7873b;
+.hover\:border-brand-secondary:hover {
+  border-color: #f5690a;
 }
 
-.hover\:border-brand-lightest:hover {
-  border-color: #f9a56c;
+.hover\:border-brand-background:hover {
+  border-color: #f8fafc;
 }
 
 .rounded-none {
@@ -4072,60 +4116,40 @@ button,
   color: #ffebef;
 }
 
-.text-quem_compra-darkest {
+.text-quem_compra-laranja {
   color: #f5690a;
 }
 
-.text-quem_compra-darker {
+.text-quem_compra-verde {
   color: #009900;
 }
 
-.text-quem_compra-dark {
+.text-quem_compra-azul {
   color: #0502fc;
 }
 
-.text-quem_compra {
+.text-quem_compra-roxo {
   color: #9d008f;
 }
 
-.text-quem_compra-light {
+.text-quem_compra-amarelo {
   color: #f6ff0a;
-}
-
-.text-quem_compra-lighter {
-  color: #f7873b;
-}
-
-.text-quem_compra-lightest {
-  color: #f9a56c;
-}
-
-.text-brand-darkest {
-  color: #f5690a;
-}
-
-.text-brand-darker {
-  color: #009900;
-}
-
-.text-brand-dark {
-  color: #0502fc;
 }
 
 .text-brand {
   color: #9d008f;
 }
 
-.text-brand-light {
-  color: #f6ff0a;
+.text-brand-primary {
+  color: #0502fc;
 }
 
-.text-brand-lighter {
-  color: #f7873b;
+.text-brand-secondary {
+  color: #f5690a;
 }
 
-.text-brand-lightest {
-  color: #f9a56c;
+.text-brand-background {
+  color: #f8fafc;
 }
 
 .hover\:text-transparent:hover {
@@ -4420,60 +4444,40 @@ button,
   color: #ffebef;
 }
 
-.hover\:text-quem_compra-darkest:hover {
+.hover\:text-quem_compra-laranja:hover {
   color: #f5690a;
 }
 
-.hover\:text-quem_compra-darker:hover {
+.hover\:text-quem_compra-verde:hover {
   color: #009900;
 }
 
-.hover\:text-quem_compra-dark:hover {
+.hover\:text-quem_compra-azul:hover {
   color: #0502fc;
 }
 
-.hover\:text-quem_compra:hover {
+.hover\:text-quem_compra-roxo:hover {
   color: #9d008f;
 }
 
-.hover\:text-quem_compra-light:hover {
+.hover\:text-quem_compra-amarelo:hover {
   color: #f6ff0a;
-}
-
-.hover\:text-quem_compra-lighter:hover {
-  color: #f7873b;
-}
-
-.hover\:text-quem_compra-lightest:hover {
-  color: #f9a56c;
-}
-
-.hover\:text-brand-darkest:hover {
-  color: #f5690a;
-}
-
-.hover\:text-brand-darker:hover {
-  color: #009900;
-}
-
-.hover\:text-brand-dark:hover {
-  color: #0502fc;
 }
 
 .hover\:text-brand:hover {
   color: #9d008f;
 }
 
-.hover\:text-brand-light:hover {
-  color: #f6ff0a;
+.hover\:text-brand-primary:hover {
+  color: #0502fc;
 }
 
-.hover\:text-brand-lighter:hover {
-  color: #f7873b;
+.hover\:text-brand-secondary:hover {
+  color: #f5690a;
 }
 
-.hover\:text-brand-lightest:hover {
-  color: #f9a56c;
+.hover\:text-brand-background:hover {
+  color: #f8fafc;
 }
 
 .text-xs {
@@ -5185,60 +5189,40 @@ button,
     background-color: #ffebef;
   }
 
-  .sm\:bg-quem_compra-darkest {
+  .sm\:bg-quem_compra-laranja {
     background-color: #f5690a;
   }
 
-  .sm\:bg-quem_compra-darker {
+  .sm\:bg-quem_compra-verde {
     background-color: #009900;
   }
 
-  .sm\:bg-quem_compra-dark {
+  .sm\:bg-quem_compra-azul {
     background-color: #0502fc;
   }
 
-  .sm\:bg-quem_compra {
+  .sm\:bg-quem_compra-roxo {
     background-color: #9d008f;
   }
 
-  .sm\:bg-quem_compra-light {
+  .sm\:bg-quem_compra-amarelo {
     background-color: #f6ff0a;
-  }
-
-  .sm\:bg-quem_compra-lighter {
-    background-color: #f7873b;
-  }
-
-  .sm\:bg-quem_compra-lightest {
-    background-color: #f9a56c;
-  }
-
-  .sm\:bg-brand-darkest {
-    background-color: #f5690a;
-  }
-
-  .sm\:bg-brand-darker {
-    background-color: #009900;
-  }
-
-  .sm\:bg-brand-dark {
-    background-color: #0502fc;
   }
 
   .sm\:bg-brand {
     background-color: #9d008f;
   }
 
-  .sm\:bg-brand-light {
-    background-color: #f6ff0a;
+  .sm\:bg-brand-primary {
+    background-color: #0502fc;
   }
 
-  .sm\:bg-brand-lighter {
-    background-color: #f7873b;
+  .sm\:bg-brand-secondary {
+    background-color: #f5690a;
   }
 
-  .sm\:bg-brand-lightest {
-    background-color: #f9a56c;
+  .sm\:bg-brand-background {
+    background-color: #f8fafc;
   }
 
   .sm\:hover\:bg-transparent:hover {
@@ -5533,60 +5517,40 @@ button,
     background-color: #ffebef;
   }
 
-  .sm\:hover\:bg-quem_compra-darkest:hover {
+  .sm\:hover\:bg-quem_compra-laranja:hover {
     background-color: #f5690a;
   }
 
-  .sm\:hover\:bg-quem_compra-darker:hover {
+  .sm\:hover\:bg-quem_compra-verde:hover {
     background-color: #009900;
   }
 
-  .sm\:hover\:bg-quem_compra-dark:hover {
+  .sm\:hover\:bg-quem_compra-azul:hover {
     background-color: #0502fc;
   }
 
-  .sm\:hover\:bg-quem_compra:hover {
+  .sm\:hover\:bg-quem_compra-roxo:hover {
     background-color: #9d008f;
   }
 
-  .sm\:hover\:bg-quem_compra-light:hover {
+  .sm\:hover\:bg-quem_compra-amarelo:hover {
     background-color: #f6ff0a;
-  }
-
-  .sm\:hover\:bg-quem_compra-lighter:hover {
-    background-color: #f7873b;
-  }
-
-  .sm\:hover\:bg-quem_compra-lightest:hover {
-    background-color: #f9a56c;
-  }
-
-  .sm\:hover\:bg-brand-darkest:hover {
-    background-color: #f5690a;
-  }
-
-  .sm\:hover\:bg-brand-darker:hover {
-    background-color: #009900;
-  }
-
-  .sm\:hover\:bg-brand-dark:hover {
-    background-color: #0502fc;
   }
 
   .sm\:hover\:bg-brand:hover {
     background-color: #9d008f;
   }
 
-  .sm\:hover\:bg-brand-light:hover {
-    background-color: #f6ff0a;
+  .sm\:hover\:bg-brand-primary:hover {
+    background-color: #0502fc;
   }
 
-  .sm\:hover\:bg-brand-lighter:hover {
-    background-color: #f7873b;
+  .sm\:hover\:bg-brand-secondary:hover {
+    background-color: #f5690a;
   }
 
-  .sm\:hover\:bg-brand-lightest:hover {
-    background-color: #f9a56c;
+  .sm\:hover\:bg-brand-background:hover {
+    background-color: #f8fafc;
   }
 
   .sm\:bg-bottom {
@@ -5941,60 +5905,40 @@ button,
     border-color: #ffebef;
   }
 
-  .sm\:border-quem_compra-darkest {
+  .sm\:border-quem_compra-laranja {
     border-color: #f5690a;
   }
 
-  .sm\:border-quem_compra-darker {
+  .sm\:border-quem_compra-verde {
     border-color: #009900;
   }
 
-  .sm\:border-quem_compra-dark {
+  .sm\:border-quem_compra-azul {
     border-color: #0502fc;
   }
 
-  .sm\:border-quem_compra {
+  .sm\:border-quem_compra-roxo {
     border-color: #9d008f;
   }
 
-  .sm\:border-quem_compra-light {
+  .sm\:border-quem_compra-amarelo {
     border-color: #f6ff0a;
-  }
-
-  .sm\:border-quem_compra-lighter {
-    border-color: #f7873b;
-  }
-
-  .sm\:border-quem_compra-lightest {
-    border-color: #f9a56c;
-  }
-
-  .sm\:border-brand-darkest {
-    border-color: #f5690a;
-  }
-
-  .sm\:border-brand-darker {
-    border-color: #009900;
-  }
-
-  .sm\:border-brand-dark {
-    border-color: #0502fc;
   }
 
   .sm\:border-brand {
     border-color: #9d008f;
   }
 
-  .sm\:border-brand-light {
-    border-color: #f6ff0a;
+  .sm\:border-brand-primary {
+    border-color: #0502fc;
   }
 
-  .sm\:border-brand-lighter {
-    border-color: #f7873b;
+  .sm\:border-brand-secondary {
+    border-color: #f5690a;
   }
 
-  .sm\:border-brand-lightest {
-    border-color: #f9a56c;
+  .sm\:border-brand-background {
+    border-color: #f8fafc;
   }
 
   .sm\:hover\:border-transparent:hover {
@@ -6289,60 +6233,40 @@ button,
     border-color: #ffebef;
   }
 
-  .sm\:hover\:border-quem_compra-darkest:hover {
+  .sm\:hover\:border-quem_compra-laranja:hover {
     border-color: #f5690a;
   }
 
-  .sm\:hover\:border-quem_compra-darker:hover {
+  .sm\:hover\:border-quem_compra-verde:hover {
     border-color: #009900;
   }
 
-  .sm\:hover\:border-quem_compra-dark:hover {
+  .sm\:hover\:border-quem_compra-azul:hover {
     border-color: #0502fc;
   }
 
-  .sm\:hover\:border-quem_compra:hover {
+  .sm\:hover\:border-quem_compra-roxo:hover {
     border-color: #9d008f;
   }
 
-  .sm\:hover\:border-quem_compra-light:hover {
+  .sm\:hover\:border-quem_compra-amarelo:hover {
     border-color: #f6ff0a;
-  }
-
-  .sm\:hover\:border-quem_compra-lighter:hover {
-    border-color: #f7873b;
-  }
-
-  .sm\:hover\:border-quem_compra-lightest:hover {
-    border-color: #f9a56c;
-  }
-
-  .sm\:hover\:border-brand-darkest:hover {
-    border-color: #f5690a;
-  }
-
-  .sm\:hover\:border-brand-darker:hover {
-    border-color: #009900;
-  }
-
-  .sm\:hover\:border-brand-dark:hover {
-    border-color: #0502fc;
   }
 
   .sm\:hover\:border-brand:hover {
     border-color: #9d008f;
   }
 
-  .sm\:hover\:border-brand-light:hover {
-    border-color: #f6ff0a;
+  .sm\:hover\:border-brand-primary:hover {
+    border-color: #0502fc;
   }
 
-  .sm\:hover\:border-brand-lighter:hover {
-    border-color: #f7873b;
+  .sm\:hover\:border-brand-secondary:hover {
+    border-color: #f5690a;
   }
 
-  .sm\:hover\:border-brand-lightest:hover {
-    border-color: #f9a56c;
+  .sm\:hover\:border-brand-background:hover {
+    border-color: #f8fafc;
   }
 
   .sm\:rounded-none {
@@ -8386,60 +8310,40 @@ button,
     color: #ffebef;
   }
 
-  .sm\:text-quem_compra-darkest {
+  .sm\:text-quem_compra-laranja {
     color: #f5690a;
   }
 
-  .sm\:text-quem_compra-darker {
+  .sm\:text-quem_compra-verde {
     color: #009900;
   }
 
-  .sm\:text-quem_compra-dark {
+  .sm\:text-quem_compra-azul {
     color: #0502fc;
   }
 
-  .sm\:text-quem_compra {
+  .sm\:text-quem_compra-roxo {
     color: #9d008f;
   }
 
-  .sm\:text-quem_compra-light {
+  .sm\:text-quem_compra-amarelo {
     color: #f6ff0a;
-  }
-
-  .sm\:text-quem_compra-lighter {
-    color: #f7873b;
-  }
-
-  .sm\:text-quem_compra-lightest {
-    color: #f9a56c;
-  }
-
-  .sm\:text-brand-darkest {
-    color: #f5690a;
-  }
-
-  .sm\:text-brand-darker {
-    color: #009900;
-  }
-
-  .sm\:text-brand-dark {
-    color: #0502fc;
   }
 
   .sm\:text-brand {
     color: #9d008f;
   }
 
-  .sm\:text-brand-light {
-    color: #f6ff0a;
+  .sm\:text-brand-primary {
+    color: #0502fc;
   }
 
-  .sm\:text-brand-lighter {
-    color: #f7873b;
+  .sm\:text-brand-secondary {
+    color: #f5690a;
   }
 
-  .sm\:text-brand-lightest {
-    color: #f9a56c;
+  .sm\:text-brand-background {
+    color: #f8fafc;
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -8734,60 +8638,40 @@ button,
     color: #ffebef;
   }
 
-  .sm\:hover\:text-quem_compra-darkest:hover {
+  .sm\:hover\:text-quem_compra-laranja:hover {
     color: #f5690a;
   }
 
-  .sm\:hover\:text-quem_compra-darker:hover {
+  .sm\:hover\:text-quem_compra-verde:hover {
     color: #009900;
   }
 
-  .sm\:hover\:text-quem_compra-dark:hover {
+  .sm\:hover\:text-quem_compra-azul:hover {
     color: #0502fc;
   }
 
-  .sm\:hover\:text-quem_compra:hover {
+  .sm\:hover\:text-quem_compra-roxo:hover {
     color: #9d008f;
   }
 
-  .sm\:hover\:text-quem_compra-light:hover {
+  .sm\:hover\:text-quem_compra-amarelo:hover {
     color: #f6ff0a;
-  }
-
-  .sm\:hover\:text-quem_compra-lighter:hover {
-    color: #f7873b;
-  }
-
-  .sm\:hover\:text-quem_compra-lightest:hover {
-    color: #f9a56c;
-  }
-
-  .sm\:hover\:text-brand-darkest:hover {
-    color: #f5690a;
-  }
-
-  .sm\:hover\:text-brand-darker:hover {
-    color: #009900;
-  }
-
-  .sm\:hover\:text-brand-dark:hover {
-    color: #0502fc;
   }
 
   .sm\:hover\:text-brand:hover {
     color: #9d008f;
   }
 
-  .sm\:hover\:text-brand-light:hover {
-    color: #f6ff0a;
+  .sm\:hover\:text-brand-primary:hover {
+    color: #0502fc;
   }
 
-  .sm\:hover\:text-brand-lighter:hover {
-    color: #f7873b;
+  .sm\:hover\:text-brand-secondary:hover {
+    color: #f5690a;
   }
 
-  .sm\:hover\:text-brand-lightest:hover {
-    color: #f9a56c;
+  .sm\:hover\:text-brand-background:hover {
+    color: #f8fafc;
   }
 
   .sm\:text-xs {
@@ -9487,60 +9371,40 @@ button,
     background-color: #ffebef;
   }
 
-  .md\:bg-quem_compra-darkest {
+  .md\:bg-quem_compra-laranja {
     background-color: #f5690a;
   }
 
-  .md\:bg-quem_compra-darker {
+  .md\:bg-quem_compra-verde {
     background-color: #009900;
   }
 
-  .md\:bg-quem_compra-dark {
+  .md\:bg-quem_compra-azul {
     background-color: #0502fc;
   }
 
-  .md\:bg-quem_compra {
+  .md\:bg-quem_compra-roxo {
     background-color: #9d008f;
   }
 
-  .md\:bg-quem_compra-light {
+  .md\:bg-quem_compra-amarelo {
     background-color: #f6ff0a;
-  }
-
-  .md\:bg-quem_compra-lighter {
-    background-color: #f7873b;
-  }
-
-  .md\:bg-quem_compra-lightest {
-    background-color: #f9a56c;
-  }
-
-  .md\:bg-brand-darkest {
-    background-color: #f5690a;
-  }
-
-  .md\:bg-brand-darker {
-    background-color: #009900;
-  }
-
-  .md\:bg-brand-dark {
-    background-color: #0502fc;
   }
 
   .md\:bg-brand {
     background-color: #9d008f;
   }
 
-  .md\:bg-brand-light {
-    background-color: #f6ff0a;
+  .md\:bg-brand-primary {
+    background-color: #0502fc;
   }
 
-  .md\:bg-brand-lighter {
-    background-color: #f7873b;
+  .md\:bg-brand-secondary {
+    background-color: #f5690a;
   }
 
-  .md\:bg-brand-lightest {
-    background-color: #f9a56c;
+  .md\:bg-brand-background {
+    background-color: #f8fafc;
   }
 
   .md\:hover\:bg-transparent:hover {
@@ -9835,60 +9699,40 @@ button,
     background-color: #ffebef;
   }
 
-  .md\:hover\:bg-quem_compra-darkest:hover {
+  .md\:hover\:bg-quem_compra-laranja:hover {
     background-color: #f5690a;
   }
 
-  .md\:hover\:bg-quem_compra-darker:hover {
+  .md\:hover\:bg-quem_compra-verde:hover {
     background-color: #009900;
   }
 
-  .md\:hover\:bg-quem_compra-dark:hover {
+  .md\:hover\:bg-quem_compra-azul:hover {
     background-color: #0502fc;
   }
 
-  .md\:hover\:bg-quem_compra:hover {
+  .md\:hover\:bg-quem_compra-roxo:hover {
     background-color: #9d008f;
   }
 
-  .md\:hover\:bg-quem_compra-light:hover {
+  .md\:hover\:bg-quem_compra-amarelo:hover {
     background-color: #f6ff0a;
-  }
-
-  .md\:hover\:bg-quem_compra-lighter:hover {
-    background-color: #f7873b;
-  }
-
-  .md\:hover\:bg-quem_compra-lightest:hover {
-    background-color: #f9a56c;
-  }
-
-  .md\:hover\:bg-brand-darkest:hover {
-    background-color: #f5690a;
-  }
-
-  .md\:hover\:bg-brand-darker:hover {
-    background-color: #009900;
-  }
-
-  .md\:hover\:bg-brand-dark:hover {
-    background-color: #0502fc;
   }
 
   .md\:hover\:bg-brand:hover {
     background-color: #9d008f;
   }
 
-  .md\:hover\:bg-brand-light:hover {
-    background-color: #f6ff0a;
+  .md\:hover\:bg-brand-primary:hover {
+    background-color: #0502fc;
   }
 
-  .md\:hover\:bg-brand-lighter:hover {
-    background-color: #f7873b;
+  .md\:hover\:bg-brand-secondary:hover {
+    background-color: #f5690a;
   }
 
-  .md\:hover\:bg-brand-lightest:hover {
-    background-color: #f9a56c;
+  .md\:hover\:bg-brand-background:hover {
+    background-color: #f8fafc;
   }
 
   .md\:bg-bottom {
@@ -10243,60 +10087,40 @@ button,
     border-color: #ffebef;
   }
 
-  .md\:border-quem_compra-darkest {
+  .md\:border-quem_compra-laranja {
     border-color: #f5690a;
   }
 
-  .md\:border-quem_compra-darker {
+  .md\:border-quem_compra-verde {
     border-color: #009900;
   }
 
-  .md\:border-quem_compra-dark {
+  .md\:border-quem_compra-azul {
     border-color: #0502fc;
   }
 
-  .md\:border-quem_compra {
+  .md\:border-quem_compra-roxo {
     border-color: #9d008f;
   }
 
-  .md\:border-quem_compra-light {
+  .md\:border-quem_compra-amarelo {
     border-color: #f6ff0a;
-  }
-
-  .md\:border-quem_compra-lighter {
-    border-color: #f7873b;
-  }
-
-  .md\:border-quem_compra-lightest {
-    border-color: #f9a56c;
-  }
-
-  .md\:border-brand-darkest {
-    border-color: #f5690a;
-  }
-
-  .md\:border-brand-darker {
-    border-color: #009900;
-  }
-
-  .md\:border-brand-dark {
-    border-color: #0502fc;
   }
 
   .md\:border-brand {
     border-color: #9d008f;
   }
 
-  .md\:border-brand-light {
-    border-color: #f6ff0a;
+  .md\:border-brand-primary {
+    border-color: #0502fc;
   }
 
-  .md\:border-brand-lighter {
-    border-color: #f7873b;
+  .md\:border-brand-secondary {
+    border-color: #f5690a;
   }
 
-  .md\:border-brand-lightest {
-    border-color: #f9a56c;
+  .md\:border-brand-background {
+    border-color: #f8fafc;
   }
 
   .md\:hover\:border-transparent:hover {
@@ -10591,60 +10415,40 @@ button,
     border-color: #ffebef;
   }
 
-  .md\:hover\:border-quem_compra-darkest:hover {
+  .md\:hover\:border-quem_compra-laranja:hover {
     border-color: #f5690a;
   }
 
-  .md\:hover\:border-quem_compra-darker:hover {
+  .md\:hover\:border-quem_compra-verde:hover {
     border-color: #009900;
   }
 
-  .md\:hover\:border-quem_compra-dark:hover {
+  .md\:hover\:border-quem_compra-azul:hover {
     border-color: #0502fc;
   }
 
-  .md\:hover\:border-quem_compra:hover {
+  .md\:hover\:border-quem_compra-roxo:hover {
     border-color: #9d008f;
   }
 
-  .md\:hover\:border-quem_compra-light:hover {
+  .md\:hover\:border-quem_compra-amarelo:hover {
     border-color: #f6ff0a;
-  }
-
-  .md\:hover\:border-quem_compra-lighter:hover {
-    border-color: #f7873b;
-  }
-
-  .md\:hover\:border-quem_compra-lightest:hover {
-    border-color: #f9a56c;
-  }
-
-  .md\:hover\:border-brand-darkest:hover {
-    border-color: #f5690a;
-  }
-
-  .md\:hover\:border-brand-darker:hover {
-    border-color: #009900;
-  }
-
-  .md\:hover\:border-brand-dark:hover {
-    border-color: #0502fc;
   }
 
   .md\:hover\:border-brand:hover {
     border-color: #9d008f;
   }
 
-  .md\:hover\:border-brand-light:hover {
-    border-color: #f6ff0a;
+  .md\:hover\:border-brand-primary:hover {
+    border-color: #0502fc;
   }
 
-  .md\:hover\:border-brand-lighter:hover {
-    border-color: #f7873b;
+  .md\:hover\:border-brand-secondary:hover {
+    border-color: #f5690a;
   }
 
-  .md\:hover\:border-brand-lightest:hover {
-    border-color: #f9a56c;
+  .md\:hover\:border-brand-background:hover {
+    border-color: #f8fafc;
   }
 
   .md\:rounded-none {
@@ -12688,60 +12492,40 @@ button,
     color: #ffebef;
   }
 
-  .md\:text-quem_compra-darkest {
+  .md\:text-quem_compra-laranja {
     color: #f5690a;
   }
 
-  .md\:text-quem_compra-darker {
+  .md\:text-quem_compra-verde {
     color: #009900;
   }
 
-  .md\:text-quem_compra-dark {
+  .md\:text-quem_compra-azul {
     color: #0502fc;
   }
 
-  .md\:text-quem_compra {
+  .md\:text-quem_compra-roxo {
     color: #9d008f;
   }
 
-  .md\:text-quem_compra-light {
+  .md\:text-quem_compra-amarelo {
     color: #f6ff0a;
-  }
-
-  .md\:text-quem_compra-lighter {
-    color: #f7873b;
-  }
-
-  .md\:text-quem_compra-lightest {
-    color: #f9a56c;
-  }
-
-  .md\:text-brand-darkest {
-    color: #f5690a;
-  }
-
-  .md\:text-brand-darker {
-    color: #009900;
-  }
-
-  .md\:text-brand-dark {
-    color: #0502fc;
   }
 
   .md\:text-brand {
     color: #9d008f;
   }
 
-  .md\:text-brand-light {
-    color: #f6ff0a;
+  .md\:text-brand-primary {
+    color: #0502fc;
   }
 
-  .md\:text-brand-lighter {
-    color: #f7873b;
+  .md\:text-brand-secondary {
+    color: #f5690a;
   }
 
-  .md\:text-brand-lightest {
-    color: #f9a56c;
+  .md\:text-brand-background {
+    color: #f8fafc;
   }
 
   .md\:hover\:text-transparent:hover {
@@ -13036,60 +12820,40 @@ button,
     color: #ffebef;
   }
 
-  .md\:hover\:text-quem_compra-darkest:hover {
+  .md\:hover\:text-quem_compra-laranja:hover {
     color: #f5690a;
   }
 
-  .md\:hover\:text-quem_compra-darker:hover {
+  .md\:hover\:text-quem_compra-verde:hover {
     color: #009900;
   }
 
-  .md\:hover\:text-quem_compra-dark:hover {
+  .md\:hover\:text-quem_compra-azul:hover {
     color: #0502fc;
   }
 
-  .md\:hover\:text-quem_compra:hover {
+  .md\:hover\:text-quem_compra-roxo:hover {
     color: #9d008f;
   }
 
-  .md\:hover\:text-quem_compra-light:hover {
+  .md\:hover\:text-quem_compra-amarelo:hover {
     color: #f6ff0a;
-  }
-
-  .md\:hover\:text-quem_compra-lighter:hover {
-    color: #f7873b;
-  }
-
-  .md\:hover\:text-quem_compra-lightest:hover {
-    color: #f9a56c;
-  }
-
-  .md\:hover\:text-brand-darkest:hover {
-    color: #f5690a;
-  }
-
-  .md\:hover\:text-brand-darker:hover {
-    color: #009900;
-  }
-
-  .md\:hover\:text-brand-dark:hover {
-    color: #0502fc;
   }
 
   .md\:hover\:text-brand:hover {
     color: #9d008f;
   }
 
-  .md\:hover\:text-brand-light:hover {
-    color: #f6ff0a;
+  .md\:hover\:text-brand-primary:hover {
+    color: #0502fc;
   }
 
-  .md\:hover\:text-brand-lighter:hover {
-    color: #f7873b;
+  .md\:hover\:text-brand-secondary:hover {
+    color: #f5690a;
   }
 
-  .md\:hover\:text-brand-lightest:hover {
-    color: #f9a56c;
+  .md\:hover\:text-brand-background:hover {
+    color: #f8fafc;
   }
 
   .md\:text-xs {
@@ -13789,60 +13553,40 @@ button,
     background-color: #ffebef;
   }
 
-  .lg\:bg-quem_compra-darkest {
+  .lg\:bg-quem_compra-laranja {
     background-color: #f5690a;
   }
 
-  .lg\:bg-quem_compra-darker {
+  .lg\:bg-quem_compra-verde {
     background-color: #009900;
   }
 
-  .lg\:bg-quem_compra-dark {
+  .lg\:bg-quem_compra-azul {
     background-color: #0502fc;
   }
 
-  .lg\:bg-quem_compra {
+  .lg\:bg-quem_compra-roxo {
     background-color: #9d008f;
   }
 
-  .lg\:bg-quem_compra-light {
+  .lg\:bg-quem_compra-amarelo {
     background-color: #f6ff0a;
-  }
-
-  .lg\:bg-quem_compra-lighter {
-    background-color: #f7873b;
-  }
-
-  .lg\:bg-quem_compra-lightest {
-    background-color: #f9a56c;
-  }
-
-  .lg\:bg-brand-darkest {
-    background-color: #f5690a;
-  }
-
-  .lg\:bg-brand-darker {
-    background-color: #009900;
-  }
-
-  .lg\:bg-brand-dark {
-    background-color: #0502fc;
   }
 
   .lg\:bg-brand {
     background-color: #9d008f;
   }
 
-  .lg\:bg-brand-light {
-    background-color: #f6ff0a;
+  .lg\:bg-brand-primary {
+    background-color: #0502fc;
   }
 
-  .lg\:bg-brand-lighter {
-    background-color: #f7873b;
+  .lg\:bg-brand-secondary {
+    background-color: #f5690a;
   }
 
-  .lg\:bg-brand-lightest {
-    background-color: #f9a56c;
+  .lg\:bg-brand-background {
+    background-color: #f8fafc;
   }
 
   .lg\:hover\:bg-transparent:hover {
@@ -14137,60 +13881,40 @@ button,
     background-color: #ffebef;
   }
 
-  .lg\:hover\:bg-quem_compra-darkest:hover {
+  .lg\:hover\:bg-quem_compra-laranja:hover {
     background-color: #f5690a;
   }
 
-  .lg\:hover\:bg-quem_compra-darker:hover {
+  .lg\:hover\:bg-quem_compra-verde:hover {
     background-color: #009900;
   }
 
-  .lg\:hover\:bg-quem_compra-dark:hover {
+  .lg\:hover\:bg-quem_compra-azul:hover {
     background-color: #0502fc;
   }
 
-  .lg\:hover\:bg-quem_compra:hover {
+  .lg\:hover\:bg-quem_compra-roxo:hover {
     background-color: #9d008f;
   }
 
-  .lg\:hover\:bg-quem_compra-light:hover {
+  .lg\:hover\:bg-quem_compra-amarelo:hover {
     background-color: #f6ff0a;
-  }
-
-  .lg\:hover\:bg-quem_compra-lighter:hover {
-    background-color: #f7873b;
-  }
-
-  .lg\:hover\:bg-quem_compra-lightest:hover {
-    background-color: #f9a56c;
-  }
-
-  .lg\:hover\:bg-brand-darkest:hover {
-    background-color: #f5690a;
-  }
-
-  .lg\:hover\:bg-brand-darker:hover {
-    background-color: #009900;
-  }
-
-  .lg\:hover\:bg-brand-dark:hover {
-    background-color: #0502fc;
   }
 
   .lg\:hover\:bg-brand:hover {
     background-color: #9d008f;
   }
 
-  .lg\:hover\:bg-brand-light:hover {
-    background-color: #f6ff0a;
+  .lg\:hover\:bg-brand-primary:hover {
+    background-color: #0502fc;
   }
 
-  .lg\:hover\:bg-brand-lighter:hover {
-    background-color: #f7873b;
+  .lg\:hover\:bg-brand-secondary:hover {
+    background-color: #f5690a;
   }
 
-  .lg\:hover\:bg-brand-lightest:hover {
-    background-color: #f9a56c;
+  .lg\:hover\:bg-brand-background:hover {
+    background-color: #f8fafc;
   }
 
   .lg\:bg-bottom {
@@ -14545,60 +14269,40 @@ button,
     border-color: #ffebef;
   }
 
-  .lg\:border-quem_compra-darkest {
+  .lg\:border-quem_compra-laranja {
     border-color: #f5690a;
   }
 
-  .lg\:border-quem_compra-darker {
+  .lg\:border-quem_compra-verde {
     border-color: #009900;
   }
 
-  .lg\:border-quem_compra-dark {
+  .lg\:border-quem_compra-azul {
     border-color: #0502fc;
   }
 
-  .lg\:border-quem_compra {
+  .lg\:border-quem_compra-roxo {
     border-color: #9d008f;
   }
 
-  .lg\:border-quem_compra-light {
+  .lg\:border-quem_compra-amarelo {
     border-color: #f6ff0a;
-  }
-
-  .lg\:border-quem_compra-lighter {
-    border-color: #f7873b;
-  }
-
-  .lg\:border-quem_compra-lightest {
-    border-color: #f9a56c;
-  }
-
-  .lg\:border-brand-darkest {
-    border-color: #f5690a;
-  }
-
-  .lg\:border-brand-darker {
-    border-color: #009900;
-  }
-
-  .lg\:border-brand-dark {
-    border-color: #0502fc;
   }
 
   .lg\:border-brand {
     border-color: #9d008f;
   }
 
-  .lg\:border-brand-light {
-    border-color: #f6ff0a;
+  .lg\:border-brand-primary {
+    border-color: #0502fc;
   }
 
-  .lg\:border-brand-lighter {
-    border-color: #f7873b;
+  .lg\:border-brand-secondary {
+    border-color: #f5690a;
   }
 
-  .lg\:border-brand-lightest {
-    border-color: #f9a56c;
+  .lg\:border-brand-background {
+    border-color: #f8fafc;
   }
 
   .lg\:hover\:border-transparent:hover {
@@ -14893,60 +14597,40 @@ button,
     border-color: #ffebef;
   }
 
-  .lg\:hover\:border-quem_compra-darkest:hover {
+  .lg\:hover\:border-quem_compra-laranja:hover {
     border-color: #f5690a;
   }
 
-  .lg\:hover\:border-quem_compra-darker:hover {
+  .lg\:hover\:border-quem_compra-verde:hover {
     border-color: #009900;
   }
 
-  .lg\:hover\:border-quem_compra-dark:hover {
+  .lg\:hover\:border-quem_compra-azul:hover {
     border-color: #0502fc;
   }
 
-  .lg\:hover\:border-quem_compra:hover {
+  .lg\:hover\:border-quem_compra-roxo:hover {
     border-color: #9d008f;
   }
 
-  .lg\:hover\:border-quem_compra-light:hover {
+  .lg\:hover\:border-quem_compra-amarelo:hover {
     border-color: #f6ff0a;
-  }
-
-  .lg\:hover\:border-quem_compra-lighter:hover {
-    border-color: #f7873b;
-  }
-
-  .lg\:hover\:border-quem_compra-lightest:hover {
-    border-color: #f9a56c;
-  }
-
-  .lg\:hover\:border-brand-darkest:hover {
-    border-color: #f5690a;
-  }
-
-  .lg\:hover\:border-brand-darker:hover {
-    border-color: #009900;
-  }
-
-  .lg\:hover\:border-brand-dark:hover {
-    border-color: #0502fc;
   }
 
   .lg\:hover\:border-brand:hover {
     border-color: #9d008f;
   }
 
-  .lg\:hover\:border-brand-light:hover {
-    border-color: #f6ff0a;
+  .lg\:hover\:border-brand-primary:hover {
+    border-color: #0502fc;
   }
 
-  .lg\:hover\:border-brand-lighter:hover {
-    border-color: #f7873b;
+  .lg\:hover\:border-brand-secondary:hover {
+    border-color: #f5690a;
   }
 
-  .lg\:hover\:border-brand-lightest:hover {
-    border-color: #f9a56c;
+  .lg\:hover\:border-brand-background:hover {
+    border-color: #f8fafc;
   }
 
   .lg\:rounded-none {
@@ -16990,60 +16674,40 @@ button,
     color: #ffebef;
   }
 
-  .lg\:text-quem_compra-darkest {
+  .lg\:text-quem_compra-laranja {
     color: #f5690a;
   }
 
-  .lg\:text-quem_compra-darker {
+  .lg\:text-quem_compra-verde {
     color: #009900;
   }
 
-  .lg\:text-quem_compra-dark {
+  .lg\:text-quem_compra-azul {
     color: #0502fc;
   }
 
-  .lg\:text-quem_compra {
+  .lg\:text-quem_compra-roxo {
     color: #9d008f;
   }
 
-  .lg\:text-quem_compra-light {
+  .lg\:text-quem_compra-amarelo {
     color: #f6ff0a;
-  }
-
-  .lg\:text-quem_compra-lighter {
-    color: #f7873b;
-  }
-
-  .lg\:text-quem_compra-lightest {
-    color: #f9a56c;
-  }
-
-  .lg\:text-brand-darkest {
-    color: #f5690a;
-  }
-
-  .lg\:text-brand-darker {
-    color: #009900;
-  }
-
-  .lg\:text-brand-dark {
-    color: #0502fc;
   }
 
   .lg\:text-brand {
     color: #9d008f;
   }
 
-  .lg\:text-brand-light {
-    color: #f6ff0a;
+  .lg\:text-brand-primary {
+    color: #0502fc;
   }
 
-  .lg\:text-brand-lighter {
-    color: #f7873b;
+  .lg\:text-brand-secondary {
+    color: #f5690a;
   }
 
-  .lg\:text-brand-lightest {
-    color: #f9a56c;
+  .lg\:text-brand-background {
+    color: #f8fafc;
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -17338,60 +17002,40 @@ button,
     color: #ffebef;
   }
 
-  .lg\:hover\:text-quem_compra-darkest:hover {
+  .lg\:hover\:text-quem_compra-laranja:hover {
     color: #f5690a;
   }
 
-  .lg\:hover\:text-quem_compra-darker:hover {
+  .lg\:hover\:text-quem_compra-verde:hover {
     color: #009900;
   }
 
-  .lg\:hover\:text-quem_compra-dark:hover {
+  .lg\:hover\:text-quem_compra-azul:hover {
     color: #0502fc;
   }
 
-  .lg\:hover\:text-quem_compra:hover {
+  .lg\:hover\:text-quem_compra-roxo:hover {
     color: #9d008f;
   }
 
-  .lg\:hover\:text-quem_compra-light:hover {
+  .lg\:hover\:text-quem_compra-amarelo:hover {
     color: #f6ff0a;
-  }
-
-  .lg\:hover\:text-quem_compra-lighter:hover {
-    color: #f7873b;
-  }
-
-  .lg\:hover\:text-quem_compra-lightest:hover {
-    color: #f9a56c;
-  }
-
-  .lg\:hover\:text-brand-darkest:hover {
-    color: #f5690a;
-  }
-
-  .lg\:hover\:text-brand-darker:hover {
-    color: #009900;
-  }
-
-  .lg\:hover\:text-brand-dark:hover {
-    color: #0502fc;
   }
 
   .lg\:hover\:text-brand:hover {
     color: #9d008f;
   }
 
-  .lg\:hover\:text-brand-light:hover {
-    color: #f6ff0a;
+  .lg\:hover\:text-brand-primary:hover {
+    color: #0502fc;
   }
 
-  .lg\:hover\:text-brand-lighter:hover {
-    color: #f7873b;
+  .lg\:hover\:text-brand-secondary:hover {
+    color: #f5690a;
   }
 
-  .lg\:hover\:text-brand-lightest:hover {
-    color: #f9a56c;
+  .lg\:hover\:text-brand-background:hover {
+    color: #f8fafc;
   }
 
   .lg\:text-xs {
@@ -18091,60 +17735,40 @@ button,
     background-color: #ffebef;
   }
 
-  .xl\:bg-quem_compra-darkest {
+  .xl\:bg-quem_compra-laranja {
     background-color: #f5690a;
   }
 
-  .xl\:bg-quem_compra-darker {
+  .xl\:bg-quem_compra-verde {
     background-color: #009900;
   }
 
-  .xl\:bg-quem_compra-dark {
+  .xl\:bg-quem_compra-azul {
     background-color: #0502fc;
   }
 
-  .xl\:bg-quem_compra {
+  .xl\:bg-quem_compra-roxo {
     background-color: #9d008f;
   }
 
-  .xl\:bg-quem_compra-light {
+  .xl\:bg-quem_compra-amarelo {
     background-color: #f6ff0a;
-  }
-
-  .xl\:bg-quem_compra-lighter {
-    background-color: #f7873b;
-  }
-
-  .xl\:bg-quem_compra-lightest {
-    background-color: #f9a56c;
-  }
-
-  .xl\:bg-brand-darkest {
-    background-color: #f5690a;
-  }
-
-  .xl\:bg-brand-darker {
-    background-color: #009900;
-  }
-
-  .xl\:bg-brand-dark {
-    background-color: #0502fc;
   }
 
   .xl\:bg-brand {
     background-color: #9d008f;
   }
 
-  .xl\:bg-brand-light {
-    background-color: #f6ff0a;
+  .xl\:bg-brand-primary {
+    background-color: #0502fc;
   }
 
-  .xl\:bg-brand-lighter {
-    background-color: #f7873b;
+  .xl\:bg-brand-secondary {
+    background-color: #f5690a;
   }
 
-  .xl\:bg-brand-lightest {
-    background-color: #f9a56c;
+  .xl\:bg-brand-background {
+    background-color: #f8fafc;
   }
 
   .xl\:hover\:bg-transparent:hover {
@@ -18439,60 +18063,40 @@ button,
     background-color: #ffebef;
   }
 
-  .xl\:hover\:bg-quem_compra-darkest:hover {
+  .xl\:hover\:bg-quem_compra-laranja:hover {
     background-color: #f5690a;
   }
 
-  .xl\:hover\:bg-quem_compra-darker:hover {
+  .xl\:hover\:bg-quem_compra-verde:hover {
     background-color: #009900;
   }
 
-  .xl\:hover\:bg-quem_compra-dark:hover {
+  .xl\:hover\:bg-quem_compra-azul:hover {
     background-color: #0502fc;
   }
 
-  .xl\:hover\:bg-quem_compra:hover {
+  .xl\:hover\:bg-quem_compra-roxo:hover {
     background-color: #9d008f;
   }
 
-  .xl\:hover\:bg-quem_compra-light:hover {
+  .xl\:hover\:bg-quem_compra-amarelo:hover {
     background-color: #f6ff0a;
-  }
-
-  .xl\:hover\:bg-quem_compra-lighter:hover {
-    background-color: #f7873b;
-  }
-
-  .xl\:hover\:bg-quem_compra-lightest:hover {
-    background-color: #f9a56c;
-  }
-
-  .xl\:hover\:bg-brand-darkest:hover {
-    background-color: #f5690a;
-  }
-
-  .xl\:hover\:bg-brand-darker:hover {
-    background-color: #009900;
-  }
-
-  .xl\:hover\:bg-brand-dark:hover {
-    background-color: #0502fc;
   }
 
   .xl\:hover\:bg-brand:hover {
     background-color: #9d008f;
   }
 
-  .xl\:hover\:bg-brand-light:hover {
-    background-color: #f6ff0a;
+  .xl\:hover\:bg-brand-primary:hover {
+    background-color: #0502fc;
   }
 
-  .xl\:hover\:bg-brand-lighter:hover {
-    background-color: #f7873b;
+  .xl\:hover\:bg-brand-secondary:hover {
+    background-color: #f5690a;
   }
 
-  .xl\:hover\:bg-brand-lightest:hover {
-    background-color: #f9a56c;
+  .xl\:hover\:bg-brand-background:hover {
+    background-color: #f8fafc;
   }
 
   .xl\:bg-bottom {
@@ -18847,60 +18451,40 @@ button,
     border-color: #ffebef;
   }
 
-  .xl\:border-quem_compra-darkest {
+  .xl\:border-quem_compra-laranja {
     border-color: #f5690a;
   }
 
-  .xl\:border-quem_compra-darker {
+  .xl\:border-quem_compra-verde {
     border-color: #009900;
   }
 
-  .xl\:border-quem_compra-dark {
+  .xl\:border-quem_compra-azul {
     border-color: #0502fc;
   }
 
-  .xl\:border-quem_compra {
+  .xl\:border-quem_compra-roxo {
     border-color: #9d008f;
   }
 
-  .xl\:border-quem_compra-light {
+  .xl\:border-quem_compra-amarelo {
     border-color: #f6ff0a;
-  }
-
-  .xl\:border-quem_compra-lighter {
-    border-color: #f7873b;
-  }
-
-  .xl\:border-quem_compra-lightest {
-    border-color: #f9a56c;
-  }
-
-  .xl\:border-brand-darkest {
-    border-color: #f5690a;
-  }
-
-  .xl\:border-brand-darker {
-    border-color: #009900;
-  }
-
-  .xl\:border-brand-dark {
-    border-color: #0502fc;
   }
 
   .xl\:border-brand {
     border-color: #9d008f;
   }
 
-  .xl\:border-brand-light {
-    border-color: #f6ff0a;
+  .xl\:border-brand-primary {
+    border-color: #0502fc;
   }
 
-  .xl\:border-brand-lighter {
-    border-color: #f7873b;
+  .xl\:border-brand-secondary {
+    border-color: #f5690a;
   }
 
-  .xl\:border-brand-lightest {
-    border-color: #f9a56c;
+  .xl\:border-brand-background {
+    border-color: #f8fafc;
   }
 
   .xl\:hover\:border-transparent:hover {
@@ -19195,60 +18779,40 @@ button,
     border-color: #ffebef;
   }
 
-  .xl\:hover\:border-quem_compra-darkest:hover {
+  .xl\:hover\:border-quem_compra-laranja:hover {
     border-color: #f5690a;
   }
 
-  .xl\:hover\:border-quem_compra-darker:hover {
+  .xl\:hover\:border-quem_compra-verde:hover {
     border-color: #009900;
   }
 
-  .xl\:hover\:border-quem_compra-dark:hover {
+  .xl\:hover\:border-quem_compra-azul:hover {
     border-color: #0502fc;
   }
 
-  .xl\:hover\:border-quem_compra:hover {
+  .xl\:hover\:border-quem_compra-roxo:hover {
     border-color: #9d008f;
   }
 
-  .xl\:hover\:border-quem_compra-light:hover {
+  .xl\:hover\:border-quem_compra-amarelo:hover {
     border-color: #f6ff0a;
-  }
-
-  .xl\:hover\:border-quem_compra-lighter:hover {
-    border-color: #f7873b;
-  }
-
-  .xl\:hover\:border-quem_compra-lightest:hover {
-    border-color: #f9a56c;
-  }
-
-  .xl\:hover\:border-brand-darkest:hover {
-    border-color: #f5690a;
-  }
-
-  .xl\:hover\:border-brand-darker:hover {
-    border-color: #009900;
-  }
-
-  .xl\:hover\:border-brand-dark:hover {
-    border-color: #0502fc;
   }
 
   .xl\:hover\:border-brand:hover {
     border-color: #9d008f;
   }
 
-  .xl\:hover\:border-brand-light:hover {
-    border-color: #f6ff0a;
+  .xl\:hover\:border-brand-primary:hover {
+    border-color: #0502fc;
   }
 
-  .xl\:hover\:border-brand-lighter:hover {
-    border-color: #f7873b;
+  .xl\:hover\:border-brand-secondary:hover {
+    border-color: #f5690a;
   }
 
-  .xl\:hover\:border-brand-lightest:hover {
-    border-color: #f9a56c;
+  .xl\:hover\:border-brand-background:hover {
+    border-color: #f8fafc;
   }
 
   .xl\:rounded-none {
@@ -21292,60 +20856,40 @@ button,
     color: #ffebef;
   }
 
-  .xl\:text-quem_compra-darkest {
+  .xl\:text-quem_compra-laranja {
     color: #f5690a;
   }
 
-  .xl\:text-quem_compra-darker {
+  .xl\:text-quem_compra-verde {
     color: #009900;
   }
 
-  .xl\:text-quem_compra-dark {
+  .xl\:text-quem_compra-azul {
     color: #0502fc;
   }
 
-  .xl\:text-quem_compra {
+  .xl\:text-quem_compra-roxo {
     color: #9d008f;
   }
 
-  .xl\:text-quem_compra-light {
+  .xl\:text-quem_compra-amarelo {
     color: #f6ff0a;
-  }
-
-  .xl\:text-quem_compra-lighter {
-    color: #f7873b;
-  }
-
-  .xl\:text-quem_compra-lightest {
-    color: #f9a56c;
-  }
-
-  .xl\:text-brand-darkest {
-    color: #f5690a;
-  }
-
-  .xl\:text-brand-darker {
-    color: #009900;
-  }
-
-  .xl\:text-brand-dark {
-    color: #0502fc;
   }
 
   .xl\:text-brand {
     color: #9d008f;
   }
 
-  .xl\:text-brand-light {
-    color: #f6ff0a;
+  .xl\:text-brand-primary {
+    color: #0502fc;
   }
 
-  .xl\:text-brand-lighter {
-    color: #f7873b;
+  .xl\:text-brand-secondary {
+    color: #f5690a;
   }
 
-  .xl\:text-brand-lightest {
-    color: #f9a56c;
+  .xl\:text-brand-background {
+    color: #f8fafc;
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -21640,60 +21184,40 @@ button,
     color: #ffebef;
   }
 
-  .xl\:hover\:text-quem_compra-darkest:hover {
+  .xl\:hover\:text-quem_compra-laranja:hover {
     color: #f5690a;
   }
 
-  .xl\:hover\:text-quem_compra-darker:hover {
+  .xl\:hover\:text-quem_compra-verde:hover {
     color: #009900;
   }
 
-  .xl\:hover\:text-quem_compra-dark:hover {
+  .xl\:hover\:text-quem_compra-azul:hover {
     color: #0502fc;
   }
 
-  .xl\:hover\:text-quem_compra:hover {
+  .xl\:hover\:text-quem_compra-roxo:hover {
     color: #9d008f;
   }
 
-  .xl\:hover\:text-quem_compra-light:hover {
+  .xl\:hover\:text-quem_compra-amarelo:hover {
     color: #f6ff0a;
-  }
-
-  .xl\:hover\:text-quem_compra-lighter:hover {
-    color: #f7873b;
-  }
-
-  .xl\:hover\:text-quem_compra-lightest:hover {
-    color: #f9a56c;
-  }
-
-  .xl\:hover\:text-brand-darkest:hover {
-    color: #f5690a;
-  }
-
-  .xl\:hover\:text-brand-darker:hover {
-    color: #009900;
-  }
-
-  .xl\:hover\:text-brand-dark:hover {
-    color: #0502fc;
   }
 
   .xl\:hover\:text-brand:hover {
     color: #9d008f;
   }
 
-  .xl\:hover\:text-brand-light:hover {
-    color: #f6ff0a;
+  .xl\:hover\:text-brand-primary:hover {
+    color: #0502fc;
   }
 
-  .xl\:hover\:text-brand-lighter:hover {
-    color: #f7873b;
+  .xl\:hover\:text-brand-secondary:hover {
+    color: #f5690a;
   }
 
-  .xl\:hover\:text-brand-lightest:hover {
-    color: #f9a56c;
+  .xl\:hover\:text-brand-background:hover {
+    color: #f8fafc;
   }
 
   .xl\:text-xs {

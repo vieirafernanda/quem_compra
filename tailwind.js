@@ -128,21 +128,16 @@ let colors = {
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
 
-  'quem_compra-darkest': '#F5690A',
-  'quem_compra-darker': '#009900',
-  'quem_compra-dark': '#0502FC',
-  'quem_compra': '#9D008F',
-  'quem_compra-light': '#F6FF0A',
-  'quem_compra-lighter': '#F7873B',
-  'quem_compra-lightest': '#F9A56C',
+  'quem_compra-laranja': '#F5690A',
+  'quem_compra-verde': '#009900',
+  'quem_compra-azul': '#0502FC',
+  'quem_compra-roxo': '#9D008F',
+  'quem_compra-amarelo': '#F6FF0A',
 
-  get ['brand-darkest']() { return this['quem_compra-darkest']; },
-  get ['brand-darker']() { return this['quem_compra-darker']; },
-  get ['brand-dark']() { return this['quem_compra-dark']; },
-  get ['brand']() { return this['quem_compra']; },
-  get ['brand-light']() { return this['quem_compra-light']; },
-  get ['brand-lighter']() { return this['quem_compra-lighter']; },
-  get ['brand-lightest']() { return this['quem_compra-lightest']; },
+  get ['brand']() { return this['quem_compra-roxo']; },
+  get ['brand-primary']() { return this['quem_compra-azul']; },
+  get ['brand-secondary']() { return this['quem_compra-laranja']; },
+  get ['brand-background']() { return this['grey-lightest']; }
 }
 
 module.exports = {

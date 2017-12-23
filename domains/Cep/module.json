@@ -1,0 +1,16 @@
+{
+    "name": "Cep",
+    "alias": "cep",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Domains\\Cep\\Providers\\CepServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "helpers.php"
+    ],
+    "requires": []
+}

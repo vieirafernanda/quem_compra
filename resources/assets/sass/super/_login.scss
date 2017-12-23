@@ -1,0 +1,9 @@
+.login-form, .register-form__partial {
+  @apply .w-1/2 .mx-8;
+
+  &__title {
+    @apply .font-bold .text-center .mb-4;
+  }
+}
+
+//  TODO: Continue form styling
