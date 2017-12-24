@@ -25,6 +25,9 @@ abstract class BaseRepository
      */
     abstract public function getModel(): string;
 
+    /**
+     * @return array
+     */
     abstract public function getDefaults(): array;
 
     /**
@@ -41,6 +44,11 @@ abstract class BaseRepository
     protected function newQuery()
     {
         return $this->getModelInstance()->newQuery();
+    }
+
+    public function toSql()
+    {
+        return $this->getQuery()->toSql();
     }
 
     /**
@@ -115,5 +123,27 @@ abstract class BaseRepository
     public function updateModel(Model $model, array $attributes = [], array $options = [])
     {
         return $model->update($attributes, $options);
+    }
+
+    /**
+     * @param array $columns
+     * @return EloquentCollection|Collection|static[]
+     */
+    public function get($columns = ['*'])
+    {
+        return $this->getQuery()->get($columns);
+    }
+
+    /**
+     * @param array ...$params
+     * @return $this
+     */
+    public function where(...$params)
+    {
+        $this->setQuery(function ($query) use ($params) {
+            return $query->where(...$params);
+        });
+
+        return $this;
     }
 }

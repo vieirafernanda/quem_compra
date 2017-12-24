@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body class="bg-brand-background h-screen">
 
@@ -46,7 +47,10 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+@routes
+@auth
+<script src="{{ route('Asset::auth') }}"></script>
+@endauth
 @yield('scripts')
 </body>
 </html>

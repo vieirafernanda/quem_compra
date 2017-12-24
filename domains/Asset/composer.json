@@ -1,0 +1,25 @@
+{
+    "name": "brksdeadpool/asset",
+    "description": "",
+    "authors": [
+        {
+            "name": "Reginaldo Junior",
+            "email": "reginaldo.junior696@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Domains\\Asset\\Providers\\AssetServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Domains\\Asset\\": ""
+        }
+    }
+}

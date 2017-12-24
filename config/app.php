@@ -180,6 +180,7 @@ return [
         //  Domains Service Providers
         Domains\Account\Providers\AccountServiceProvider::class,
         Domains\Cep\Providers\CepServiceProvider::class,
+        Domains\Asset\Providers\AssetServiceProvider::class,
     ],
 
     /*

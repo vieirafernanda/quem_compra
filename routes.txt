@@ -1,24 +1,25 @@
-+--------+----------+-------------------------+----------------------------+------------------------------------------------------------------------+--------------+
-| Domain | Method   | URI                     | Name                       | Action                                                                 | Middleware   |
-+--------+----------+-------------------------+----------------------------+------------------------------------------------------------------------+--------------+
-|        | GET|HEAD | /                       |                            | Closure                                                                | web          |
-|        | GET|HEAD | api/user                |                            | Closure                                                                | api,auth:api |
-|        | GET|HEAD | conta                   | Account::                  | Closure                                                                | web          |
-|        | GET|HEAD | conta/completar         | Account::complete          | Domains\Account\Http\Controllers\CompleteController@showCompleteForm   | web,auth     |
-|        | GET|HEAD | conta/facebook          | Account::facebook          | Domains\Account\Http\Controllers\FacebookController@redirect           | web,guest    |
-|        | GET|HEAD | conta/facebook/callback | Account::facebook.callback | Domains\Account\Http\Controllers\FacebookController@callback           | web,guest    |
-|        | POST     | conta/login             | Account::                  | Domains\Account\Http\Controllers\LoginController@login                 | web,guest    |
-|        | GET|HEAD | conta/login             | Account::login             | Domains\Account\Http\Controllers\LoginController@showLoginForm         | web,guest    |
-|        | GET|HEAD | conta/registre-se       | Account::register          | Domains\Account\Http\Controllers\RegisterController@showRegisterForm   | web,guest    |
-|        | POST     | conta/registre-se       | Account::                  | Domains\Account\Http\Controllers\RegisterController@register           | web,guest    |
-|        | GET|HEAD | home                    | home                       | App\Http\Controllers\HomeController@index                              | web,auth     |
-|        | POST     | login                   |                            | App\Http\Controllers\Auth\LoginController@login                        | web,guest    |
-|        | GET|HEAD | login                   | login                      | App\Http\Controllers\Auth\LoginController@showLoginForm                | web,guest    |
-|        | POST     | logout                  | logout                     | App\Http\Controllers\Auth\LoginController@logout                       | web          |
-|        | POST     | password/email          | password.email             | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web,guest    |
-|        | GET|HEAD | password/reset          | password.request           | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web,guest    |
-|        | POST     | password/reset          |                            | App\Http\Controllers\Auth\ResetPasswordController@reset                | web,guest    |
-|        | GET|HEAD | password/reset/{token}  | password.reset             | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web,guest    |
-|        | GET|HEAD | register                | register                   | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest    |
-|        | POST     | register                |                            | App\Http\Controllers\Auth\RegisterController@register                  | web,guest    |
-+--------+----------+-------------------------+----------------------------+------------------------------------------------------------------------+--------------+
++--------+----------+-------------------------+----------------------------+--------------------------------------------------------------------------+--------------+
+| Domain | Method   | URI                     | Name                       | Action                                                                   | Middleware   |
++--------+----------+-------------------------+----------------------------+--------------------------------------------------------------------------+--------------+
+|        | GET|HEAD | /                       |                            | Closure                                                                  | web          |
+|        | GET|HEAD | api/cep/states          | CepApi::states             | Domains\Cep\Http\Controllers\ReadStatesController@index                  | api          |
+|        | GET|HEAD | api/user                |                            | Closure                                                                  | api,auth:api |
+|        | GET|HEAD | conta                   | Account::                  | Closure                                                                  | web          |
+|        | GET|HEAD | conta/completar         | Account::complete          | Domains\Account\Http\Controllers\CompleteController@showCompleteForm     | web,auth     |
+|        | GET|HEAD | conta/facebook          | Account::facebook          | Domains\Account\Http\Controllers\FacebookController@redirect             | web,guest    |
+|        | GET|HEAD | conta/facebook/callback | Account::facebook.callback | Domains\Account\Http\Controllers\FacebookController@callback             | web,guest    |
+|        | GET|HEAD | conta/login             | Account::login             | Domains\Account\Http\Controllers\LoginController@showLoginForm           | web,guest    |
+|        | POST     | conta/login             | Account::                  | Domains\Account\Http\Controllers\LoginController@login                   | web,guest    |
+|        | POST     | conta/registre-se       | Account::                  | Domains\Account\Http\Controllers\RegisterController@register             | web,guest    |
+|        | GET|HEAD | conta/registre-se       | Account::register          | Domains\Account\Http\Controllers\RegisterController@showRegistrationForm | web,guest    |
+|        | GET|HEAD | home                    | home                       | App\Http\Controllers\HomeController@index                                | web,auth     |
+|        | POST     | login                   |                            | App\Http\Controllers\Auth\LoginController@login                          | web,guest    |
+|        | GET|HEAD | login                   | login                      | App\Http\Controllers\Auth\LoginController@showLoginForm                  | web,guest    |
+|        | POST     | logout                  | logout                     | App\Http\Controllers\Auth\LoginController@logout                         | web          |
+|        | POST     | password/email          | password.email             | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail    | web,guest    |
+|        | GET|HEAD | password/reset          | password.request           | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm   | web,guest    |
+|        | POST     | password/reset          |                            | App\Http\Controllers\Auth\ResetPasswordController@reset                  | web,guest    |
+|        | GET|HEAD | password/reset/{token}  | password.reset             | App\Http\Controllers\Auth\ResetPasswordController@showResetForm          | web,guest    |
+|        | POST     | register                |                            | App\Http\Controllers\Auth\RegisterController@register                    | web,guest    |
+|        | GET|HEAD | register                | register                   | App\Http\Controllers\Auth\RegisterController@showRegistrationForm        | web,guest    |
++--------+----------+-------------------------+----------------------------+--------------------------------------------------------------------------+--------------+

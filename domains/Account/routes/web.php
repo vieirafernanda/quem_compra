@@ -4,7 +4,7 @@ use \Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return 'conta';
-});
+})->name('index');
 
 Route::get('login', 'LoginController@showLoginForm')->name('login');
 Route::post('login', 'LoginController@login');
