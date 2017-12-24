@@ -23,6 +23,8 @@ class CreateCitiesTable extends Migration
                 ->onDelete('cascade');
             $table->timestamps();
         });
+
+        resolve(DatabaseSeeder::class)->call(\Domains\Cep\Database\Seeders\CitiesTableSeederTableSeeder::class);
     }
 
     /**

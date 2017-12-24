@@ -19,6 +19,8 @@ class CreateStatesTable extends Migration
             $table->string('initials', 3)->unique();
             $table->timestamps();
         });
+
+        resolve(DatabaseSeeder::class)->call(\Domains\Cep\Database\Seeders\StatesTableSeederTableSeeder::class);
     }
 
     /**

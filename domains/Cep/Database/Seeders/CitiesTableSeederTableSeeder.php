@@ -17,6 +17,8 @@ class CitiesTableSeederTableSeeder extends Seeder
      */
     public function run()
     {
+        Model::unguard();
+
         $cities = collect(json_decode(file_get_contents(__DIR__ . '/cities.json'), true))
             ->map(function ($city) {
                 $city['created_at'] = Carbon::now();
