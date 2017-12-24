@@ -28,7 +28,7 @@ class CreateUserCepsTable extends Migration
                 ->onDelete('cascade');
             $table->foreign('city_id')
                 ->references('id')
-                ->on('city')
+                ->on('cities')
                 ->onDelete('cascade');
         });
     }
