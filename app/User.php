@@ -3,6 +3,7 @@
 namespace App;
 
 use Domains\Account\Entities\UserCep;
+use Domains\Account\Entities\UserPhone;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -56,5 +57,10 @@ class User extends Authenticatable implements JWTSubject
     public function cep()
     {
         return $this->hasOne(UserCep::class);
+    }
+
+    public function phone()
+    {
+        return $this->hasOne(UserPhone::class);
     }
 }
