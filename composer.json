@@ -13,6 +13,8 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "nwidart/laravel-modules": "^2.6",
+        "predis/predis": "^1.1",
+        "ramsey/uuid": "^3.7",
         "tightenco/ziggy": "^0.6.0",
         "tymon/jwt-auth": "1.0.0-rc.1"
     },

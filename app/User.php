@@ -8,6 +8,9 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
+/**
+ * @property mixed email_token
+ */
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
@@ -19,10 +22,12 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
-        'username',
-        'confirmed'
+        'cpf',
+        'confirmed',
+        'email_token',
     ];
 
     /**
@@ -31,7 +36,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'cpf', 'email_token'
     ];
 
     /**

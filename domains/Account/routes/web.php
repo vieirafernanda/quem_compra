@@ -16,3 +16,4 @@ Route::get('facebook', 'FacebookController@redirect')->name('facebook');
 Route::get('facebook/callback', 'FacebookController@callback')->name('facebook.callback');
 
 Route::get('completar', 'CompleteController@showCompleteForm')->name('complete')->middleware('auth');
+Route::get('verificar/{token}', 'CompleteController@verify')->name('verify')->middleware('auth');

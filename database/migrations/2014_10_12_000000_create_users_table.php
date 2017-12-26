@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('cpf')->nullable();
             $table->boolean('confirmed')->default(false);
+            $table->string('email_token')->nullable(false);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -2,6 +2,8 @@
 
 namespace Domains\Account\Http\Controllers;
 
+use App\Jobs\SendVerificationEmail;
+use App\User;
 use Domains\Account\Http\Requests\RegisterUserRequest;
 use Domains\Account\Support\Repositories\AccountRepository;
 use Illuminate\Auth\Events\Registered;
@@ -48,6 +50,7 @@ class RegisterController extends Controller
     public function register(RegisterUserRequest $request)
     {
         event(new Registered($user = $this->create($request->all())));
+        dispatch(new SendVerificationEmail($user));
 
         $this->guard()->login($user);
 
