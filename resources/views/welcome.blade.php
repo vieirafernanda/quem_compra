@@ -15,13 +15,13 @@
 </head>
 <body class="bg-brand-lightest font-sans font-normal">
     <div class="flex flex-col">
-        @if(Route::has('login'))
+        @if(Route::has('Account::login'))
             <div class="absolute pin-t pin-r mt-4 mr-4">
                 @auth
                     <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase">Home</a>
                 @else
-                    <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase pr-6">Login</a>
-                    <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase">Register</a>
+                    <a href="{{ route('Account::login') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase pr-6">Login</a>
+                    <a href="{{ route('Account::register') }}" class="no-underline hover:underline text-sm font-normal text-brand-dark uppercase">Register</a>
                 @endauth
             </div>
         @endif

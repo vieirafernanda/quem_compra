@@ -33,6 +33,9 @@ if (authToken) {
 window.Vue = require('vue');
 
 Vue.use(require('./plugin'))
+Vue.use(require('vee-validate'), require('./plugin-config/veeValidate'))
+
+require('./plugin-extended')
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

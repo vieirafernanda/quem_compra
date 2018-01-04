@@ -1,16 +1,22 @@
 <script>
   export default {
     name: 'CompleteForm',
+    props: {
+      auth: {
+        type: Object,
+        required: true
+      },
+    },
     data() {
       return {
         user: {
           username: '',
-          state: '',
-          city: '',
+          state_id: '',
+          city_id: '',
           cpf: '',
           phone: '',
           neighborhood: ''
-        },
+        }
       }
     },
     computed: {
@@ -29,11 +35,18 @@
       canSubmit() {
         let user = this.user
         return (
-          !!user.state &&
-          !!user.city &&
+          !!user.state_id &&
+          !!user.city_id &&
           !!user.phone &&
           !!user.neighborhood
         )
+      },
+      validation() {
+        return {
+          username: {
+            //  TODO: Continue validation
+          }
+        }
       }
     },
     methods: {
@@ -68,6 +81,7 @@
                        name="username"
                        id="username"
                        v-model="user.username"
+                       v-validate="validation.username"
                        placeholder="Digite seu bairro">
             </div>
             <div class="input__container">
@@ -90,17 +104,17 @@
                           placeholder="Digite seu telefone"
                           name="phone"/>
             </div>
-            <states-input v-model="user.state"
+            <states-input v-model="user.state_id"
                           placeholder="Escolha um estado"
                           name="state">Estado*
             </states-input>
-            <cities-input v-if="user.state"
-                          v-model="user.city"
-                          :state="user.state"
+            <cities-input v-if="user.state_id"
+                          v-model="user.city_id"
+                          :state="user.state_id"
                           placeholder="Escolha uma cidade"
                           name="city">Cidade*
             </cities-input>
-            <div v-if="user.city" class="input__container">
+            <div v-if="user.city_id" class="input__container">
                 <label for="neighborhood" class="input__label">Bairro*</label>
                 <input type="text"
                        class="input__control"

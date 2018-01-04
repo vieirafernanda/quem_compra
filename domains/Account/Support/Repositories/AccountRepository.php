@@ -8,6 +8,7 @@ use Ramsey\Uuid\Uuid;
 
 class AccountRepository extends BaseRepository
 {
+    private $user;
 
     /**
      * @return string
@@ -40,6 +41,46 @@ class AccountRepository extends BaseRepository
 
     public function complete(array $data)
     {
+        $data = collect($data);
+        $this->user = auth()->user();
 
+        $this->makeCep($data->only(['state_id', 'city_id', 'neighborhood']));
+        $this->makeDetails($data->only(['cpf', 'username']));
+        $this->makePhone($data->only(['phone']));
+    }
+
+    private function makeCep($data)
+    {
+        if ($this->user->cep == null) {
+            return $this
+                ->user
+                ->cep()
+                ->create($data->toArray());
+        }
+        return $this
+            ->user
+            ->cep()
+            ->update($data->toArray());
+    }
+
+    private function makeDetails($data)
+    {
+        $this
+            ->user
+            ->update($data->toArray());
+    }
+
+    private function makePhone($data)
+    {
+        if ($this->user->phone == null) {
+            return $this->user->phone()
+                ->create([
+                    'number' => $data['phone']
+                ]);
+        }
+        return $this->user->phone()
+            ->update([
+                'number' => $data['phone']
+            ]);
     }
 }

@@ -2,4 +2,4 @@
 
 use \Illuminate\Support\Facades\Route;
 
-Route::post('complete', 'CompleteAccountController@complete')->name('complete');
+Route::post('complete', 'CompleteController@complete')->name('complete');

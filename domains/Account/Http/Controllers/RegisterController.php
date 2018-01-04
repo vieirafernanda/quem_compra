@@ -22,7 +22,7 @@ class RegisterController extends Controller
     /**
      * @var string
      */
-    protected $redirectTo = '/conta/completar';
+    protected $redirectTo = '/conta';
 
     /**
      * RegisterController constructor.
@@ -86,6 +86,10 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        //
+        if (request()->ajax()) {
+            return response($user);
+        }
+
+        return redirect($this->redirectPath());
     }
 }

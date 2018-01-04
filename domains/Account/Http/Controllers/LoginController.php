@@ -33,6 +33,10 @@ class LoginController extends BaseLogin
             return redirect(route('Account::complete'));
         }
 
+        if ($request->ajax()) {
+            return response($user);
+        }
+
         return redirect()->intended($this->redirectPath());
     }
 }

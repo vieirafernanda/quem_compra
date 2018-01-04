@@ -1,6 +1,11 @@
 .register-form {
-  @apply .w-1/2;
+  @screen lg {
+    @apply .w-1/2;
+  }
 
+  @screen sm {
+    @apply .w-full;
+  }
   &__title {
     @apply .font-bold .text-center .mb-4;
   }

@@ -13,6 +13,7 @@ export const install = Vue => {
   Object.keys(Helpers)
     .forEach(helper => {
       Vue.prototype[helper] = Helpers[helper]
+      Vue[helper] = Helpers[helper]
     })
 
   Object.keys(Directives)

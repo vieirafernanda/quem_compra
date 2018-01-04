@@ -24,9 +24,9 @@ class CompleteAccountRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required|string|max:50|unique:users',
-            'state' => 'required|integer|exists:states,id',
-            'city' => 'required|integer|exists:cities,id',
+            'username' => 'required|string|min:3|max:50|unique:users',
+            'state_id' => 'required|integer|exists:states,id',
+            'city_id' => 'required|integer|exists:cities,id',
             'neighborhood' => 'required|string',
             'cpf' => 'nullable|string',
             'phone' => 'required|string'
