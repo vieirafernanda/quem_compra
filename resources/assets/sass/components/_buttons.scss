@@ -1,0 +1,11 @@
+.btn {
+  @apply .font-bold .py-2 .px-4 .rounded;
+
+  &--primary {
+    @apply .bg-brand-primary .text-white;
+  }
+
+  &:disabled {
+    @apply .opacity-50 .cursor-not-allowed;
+  }
+}

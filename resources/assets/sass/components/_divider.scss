@@ -1,0 +1,22 @@
+.vertical-divider {
+  clear: both;
+
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.vertical-divider .column:not(:first-child):after,
+.vertical-divider .columns:not(:first-child):after {
+  background: #ddd;
+  bottom: 0;
+  content: ' ';
+  margin-left: -10px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}

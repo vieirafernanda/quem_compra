@@ -2,9 +2,8 @@
 
 namespace Domains\Account\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {

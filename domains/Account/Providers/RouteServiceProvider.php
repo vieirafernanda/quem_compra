@@ -45,7 +45,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-            ->prefix($this->prefix)
+            ->prefix('conta')
             ->namespace($this->namespace)
             ->name("Account::")
             ->group(__DIR__.'/../routes/web.php');
@@ -61,7 +61,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api/'.$this->prefix)
-            ->middleware('api')
+            ->middleware(['api', 'auth:api'])
             ->namespace($this->namespace)
             ->name("AccountApi::")
             ->group(__DIR__.'/../routes/api.php');

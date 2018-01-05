@@ -32,7 +32,7 @@ return [
             'views/index' => 'Resources/views/index.blade.php',
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
-            'composer' => 'composer.json',
+            'composer' => 'composer.json'
         ],
         'replacements' => [
             'start' => ['LOWER_NAME', 'ROUTES_LOCATION'],

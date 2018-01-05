@@ -1,0 +1,11 @@
+.card {
+  @apply .rounded .shadow;
+
+  &__header {
+    @apply .font-medium .bg-brand-secondary .text-lg .p-3 .rounded-t .text-white;
+  }
+
+  &__content {
+    @apply .bg-white .p-3 .rounded-b;
+  }
+}

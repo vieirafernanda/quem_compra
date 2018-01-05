@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
-var tailwindcss = require('tailwindcss');
+let path = require('path');
+let tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,7 +13,26 @@ var tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'resources/assets/js')
+    },
+    extensions: ['.ts'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
+      }
+    ]
+  }
+})
+
+mix
+// .js('resources/assets/js/app.js', 'public/js')
+  .js('resources/assets/js/domains/account/account.js', 'public/js')
   .sass('resources/assets/sass/main.scss', 'public/css')
   .options({
     processCssUrls: false,
@@ -20,18 +40,3 @@ mix.js('resources/assets/js/app.js', 'public/js')
       tailwindcss('tailwind.js')
     ]
   })
-
-// If you want to use LESS for your preprocessing
-// mix.less('resources/assets/less/main.less', 'public/css')
-//   .options({
-//     postCss: [
-//       tailwindcss('./tailwind.js'),
-//     ]
-//   })
-
-// If you want to use SASS for preprocessing
-// mix.sass('resources/assets/sass/app.scss', 'public/css')
-//    .options({
-//       processCssUrls: false,
-//       postCss: [ tailwindcss('tailwind.js') ],
-//    });

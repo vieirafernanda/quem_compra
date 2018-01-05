@@ -1,0 +1,14 @@
+.login-form, .register-form__partial {
+  @screen lg {
+    @apply .w-1/2 .mx-8;
+  }
+
+  @screen sm {
+    @apply .w-full;
+  }
+
+  &__title {
+    @apply .font-bold .text-center .mb-4;
+  }
+}
+//  TODO: Continue form styling
