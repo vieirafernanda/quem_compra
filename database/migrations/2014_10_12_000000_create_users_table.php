@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable()->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('cpf')->nullable();
+            $table->bigInteger('cpf')->nullable();
             $table->boolean('confirmed')->default(false);
-            $table->string('email_token')->nullable(false);
+            $table->string('email_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
