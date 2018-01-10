@@ -10,6 +10,7 @@
     data() {
       return {
         user: {
+          name: '',
           username: '',
           state_id: '',
           city_id: '',
@@ -44,7 +45,10 @@
       validation() {
         return {
           username: {
-            //  TODO: Continue validation
+            required: true
+          },
+          name: {
+            required: true
           }
         }
       }
@@ -74,6 +78,16 @@
         </header>
         <main class="card__content complete-form__fields">
 
+            <div class="input__container">
+                <label for="username" class="input__label">Nome*</label>
+                <input type="text"
+                       class="input__control"
+                       name="name"
+                       id="name"
+                       v-model="user.name"
+                       v-validate="validation.name"
+                       placeholder="Digite seu nome">
+            </div>
             <div class="input__container">
                 <label for="username" class="input__label">Apelido*</label>
                 <input type="text"
