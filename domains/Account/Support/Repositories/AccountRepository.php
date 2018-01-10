@@ -45,7 +45,7 @@ class AccountRepository extends BaseRepository
         $this->user = auth()->user();
 
         $this->makeCep($data->only(['state_id', 'city_id', 'neighborhood']));
-        $this->makeDetails($data->only(['cpf', 'username']));
+        $this->makeDetails($data->only(['cpf', 'username', 'name']));
         $this->makePhone($data->only(['phone']));
     }
 
