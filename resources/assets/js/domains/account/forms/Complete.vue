@@ -96,7 +96,7 @@
                        id="username"
                        v-model="user.username"
                        v-validate="validation.username"
-                       placeholder="Digite seu bairro">
+                       placeholder="Digite seu apelido">
             </div>
             <div class="input__container">
                 <label for="cpf" class="input__label">Cpf / Cnpj</label>
