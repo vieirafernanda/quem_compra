@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'CompleteForm',
+    name: 'UpdateForm',
     props: {
       auth: {
         type: Object,
@@ -11,7 +11,6 @@
       return {
         user: {
           name: '',
-          username: '',
           state_id: '',
           city_id: '',
           cpf: '',
@@ -45,14 +44,18 @@
       },
       validation() {
         return {
-          username: {
-            required: true
-          },
           name: {
             required: true
           }
         }
       }
+    },
+    mounted() {
+      this.$set(this, 'user', {
+        name: this.auth.name,
+        cpf: this.auth.cpf,
+        phone: this.auth.phone,
+      })
     },
     methods: {
       onSubmit() {
@@ -60,9 +63,22 @@
 
         let FormData = this.$prepareFormData(this.user)
 
-        axios.post(route('AccountApi::complete'), FormData)
+        axios.post(route('AccountApi::update'), FormData)
           .then(this.redirect)
           .catch(this.$handleRequestError)
+      },
+      setState() {
+        this.$set(this, 'user', {
+          ...this.user,
+          state_id: this.auth.state_id.toString()
+        })
+      },
+      setCity() {
+        this.$set(this, 'user', {
+          ...this.user,
+          city_id: this.auth.city_id.toString()
+        })
+        this.user.neighborhood = this.auth.neighborhood
       },
       redirect({data}) {
         this.finished = true
@@ -81,7 +97,7 @@
         <template v-if="!finished">
 
             <header class="card__header complete-form__header">
-                Adicionar Outras Informações Pessoais
+                Atualizar Suas Informações Pessoais
             </header>
             <main class="card__content complete-form__fields">
 
@@ -94,16 +110,6 @@
                            v-model="user.name"
                            v-validate="validation.name"
                            placeholder="Digite seu nome">
-                </div>
-                <div class="input__container">
-                    <label for="username" class="input__label">Apelido*</label>
-                    <input type="text"
-                           class="input__control"
-                           name="username"
-                           id="username"
-                           v-model="user.username"
-                           v-validate="validation.username"
-                           placeholder="Digite seu bairro">
                 </div>
                 <div class="input__container">
                     <label for="cpf" class="input__label">Cpf / Cnpj</label>
@@ -127,13 +133,15 @@
                 </div>
                 <states-input v-model="user.state_id"
                               placeholder="Escolha um estado"
-                              name="state">Estado*
+                              name="state"
+                              @loaded="setState">Estado*
                 </states-input>
                 <cities-input v-if="user.state_id"
                               v-model="user.city_id"
                               :state="user.state_id"
                               placeholder="Escolha uma cidade"
-                              name="city">Cidade*
+                              name="city"
+                              @loaded="setCity">Cidade*
                 </cities-input>
                 <div v-if="user.city_id" class="input__container">
                     <label for="neighborhood" class="input__label">Bairro*</label>
@@ -153,8 +161,7 @@
                 Sucesso!
             </header>
             <main class="card__content complete-form__fields">
-                <p>Você finalizou o seu cadastro!</p>
-                <p>Ainda falta confirma seu email! Cheque sua caixa postal e spams caso não encontre.</p>
+                <p>Você atualizou o seu cadastro!</p>
             </main>
         </template>
     </form>
