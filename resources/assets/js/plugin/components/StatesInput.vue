@@ -27,6 +27,7 @@
       axios.get(route('CepApi::states'))
         .then(({data}) => {
           this.states = data
+          this.$emit('loaded')
         })
         .catch(this.$handleRequestError)
     },
