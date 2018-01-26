@@ -17,7 +17,8 @@
           cpf: '',
           phone: '',
           neighborhood: ''
-        }
+        },
+        finished: false
       }
     },
     computed: {
@@ -64,7 +65,11 @@
           .catch(this.$handleRequestError)
       },
       redirect({data}) {
-        window.location.href = route('Account::index')
+        this.finished = true
+        const FOUR_SECONDS = 4000
+        setTimeout(() => {
+          window.location.pathname = '/'
+        }, FOUR_SECONDS)
       }
     }
   }
@@ -73,10 +78,12 @@
 
 <template>
     <form @submit.prevent="onSubmit" class="card card--md complete-form w-full sm:w-full lg:w-1/2">
-        <header class="card__header complete-form__header">
-            Adicionar Outras Informações Pessoais
-        </header>
-        <main class="card__content complete-form__fields">
+        <template v-if="!finished">
+
+            <header class="card__header complete-form__header">
+                Adicionar Outras Informações Pessoais
+            </header>
+            <main class="card__content complete-form__fields">
 
             <div class="input__container">
                 <label for="username" class="input__label">Nome*</label>
@@ -138,7 +145,17 @@
                        placeholder="Digite seu bairro">
             </div>
 
-            <button class="btn btn--primary" :disabled="!canSubmit">Salvar</button>
-        </main>
+                <button class="btn btn--primary" :disabled="!canSubmit">Salvar</button>
+            </main>
+        </template>
+        <template v-else>
+            <header class="card__header complete-form__header bg-green-500">
+                Sucesso!
+            </header>
+            <main class="card__content complete-form__fields">
+                <p>Você finalizou o seu cadastro!</p>
+                <p>Ainda falta confirma seu email! Cheque sua caixa postal e spams caso não encontre.</p>
+            </main>
+        </template>
     </form>
 </template>

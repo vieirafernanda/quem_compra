@@ -32,7 +32,7 @@
                            name="password_confirmation"
                            placeholder="repetir senha"></div>
 
-                <button class="btn btn-primary">Registrar</button>
+                <button class="btn btn--primary">Registrar</button>
             </form>
         </div>
     </div>

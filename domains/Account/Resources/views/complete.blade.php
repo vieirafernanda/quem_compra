@@ -2,9 +2,10 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container-fluid p-2 pb-6">
         <div class="row">
-            <complete-form></complete-form>
+            <complete-form
+                :auth="{{ auth()->user() }}"></complete-form>
         </div>
     </div>
 

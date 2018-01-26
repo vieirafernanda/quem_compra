@@ -14,6 +14,7 @@ require('../../bootstrap');
  */
 
 Vue.component('complete-form', require('./forms/Complete'))
+Vue.component('update-form', require('./forms/Update'))
 Vue.component('login-form', require('./forms/Login'))
 Vue.component('fast-register-form', require('./forms/FastRegister'))
 
