@@ -11,7 +11,7 @@ class AccountController extends Controller
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
         return view('account::index');
     }
