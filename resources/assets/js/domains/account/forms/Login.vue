@@ -45,6 +45,10 @@
       redirect() {
         window.location.href = this.redirectUrl
       }
+    },
+    created() {
+      console.log(this.$validator)
+      console.log(this.$validator.locale)
     }
   }
 </script>
