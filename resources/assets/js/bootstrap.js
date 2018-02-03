@@ -33,7 +33,14 @@ if (authToken) {
 window.Vue = require('vue');
 
 Vue.use(require('./plugin'))
-Vue.use(require('vee-validate'), require('./plugin-config/veeValidate'))
+
+
+import ptBR from 'vee-validate/dist/locale/pt_BR'
+import VeeValidate, {Validator} from 'vee-validate'
+
+Validator.localize(ptBR)
+
+Vue.use(VeeValidate, require('./plugin-config/veeValidate'))
 
 require('./plugin-extended')
 
