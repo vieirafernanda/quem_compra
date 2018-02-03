@@ -35,12 +35,13 @@ window.Vue = require('vue');
 Vue.use(require('./plugin'))
 
 
-import ptBR from 'vee-validate/dist/locale/pt_BR'
 import VeeValidate, {Validator} from 'vee-validate'
+import ptBr from 'vee-validate/dist/locale/pt_BR'
+import config from './plugin-config/veeValidate'
 
-Validator.localize('pt_BR', ptBR)
+Validator.localize('pt_BR', ptBr)
 
-Vue.use(VeeValidate, require('./plugin-config/veeValidate'))
+Vue.use(VeeValidate, config)
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
